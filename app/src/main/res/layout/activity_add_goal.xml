@@ -18,7 +18,7 @@
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/name"
+        android:id="@+id/ename"
         android:layout_alignParentEnd="true"
         android:hint="Название" />
 
@@ -27,10 +27,10 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/ename"
         android:layout_alignParentStart="true"
         android:layout_marginTop="29dp"
-        android:id="@+id/numbermoney"
+        android:id="@+id/enumbermoney"
         android:layout_alignParentEnd="true"
         android:hint="Кол-во денег" />
 
@@ -39,23 +39,30 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:layout_below="@+id/numbermoney"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="31dp"
-        android:id="@+id/data"
+        android:id="@+id/edata"
+        android:hint="Дата"
+        android:layout_below="@+id/enumbermoney"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:hint="Дата" />
+        android:onClick="add"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_below="@+id/data"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp"
-        android:id="@+id/description"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/edescription"
         android:hint="Описание"
-        android:inputType="textMultiLine|textLongMessage" />
+        android:inputType="text|number|date"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

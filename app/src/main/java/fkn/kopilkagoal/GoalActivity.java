@@ -9,20 +9,30 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GoalActivity extends AppCompatActivity {
-
+    private ListView lvGoal;
+    private GoalAdapter adapter;
+    private List<Goal> mGoallist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//        lvGoal = (ListView)findViewById(R.id.goal_list);
+//        mGoallist=new ArrayList<>();
     }
     protected void add_goal(View v){
         Intent intent = new Intent(this,AddGoalActivity.class);
         startActivity(intent);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
